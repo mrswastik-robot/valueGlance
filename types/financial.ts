@@ -13,12 +13,12 @@ export interface FilterState {
     end: string
   }
   revenue: {
-    min: number
-    max: number
+    min: number | undefined
+    max: number | undefined
   }
   netIncome: {
-    min: number
-    max: number
+    min: number | undefined
+    max: number | undefined
   }
 }
 

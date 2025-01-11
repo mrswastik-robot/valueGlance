@@ -46,7 +46,14 @@ export default function FinancialTable() {
       if (!response.ok) throw new Error('Failed to fetch data')
       const jsonData = await response.json()
       
-      const formattedData: FinancialData[] = jsonData.map((item: any) => ({
+      const formattedData: FinancialData[] = jsonData.map((item: {
+        date: string;
+        revenue: number;
+        netIncome: number;
+        grossProfit: number;
+        eps: number;
+        operatingIncome: number;
+      }) => ({
         date: item.date,
         revenue: item.revenue,
         netIncome: item.netIncome,
