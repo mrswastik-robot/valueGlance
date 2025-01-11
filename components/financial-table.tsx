@@ -256,8 +256,8 @@ export default function FinancialTable() {
                   filteredAndSortedData.map((item) => (
                     <TableRow key={item.date}>
                       <TableCell>{formatDate(item.date)}</TableCell>
-                      <TableCell>{formatCurrency(item.revenue)}</TableCell>
-                      <TableCell>{formatCurrency(item.netIncome)}</TableCell>
+                      <TableCell className="pl-5">{formatCurrency(item.revenue)}</TableCell>
+                      <TableCell className="pl-5">{formatCurrency(item.netIncome)}</TableCell>
                       <TableCell>{formatCurrency(item.grossProfit)}</TableCell>
                       <TableCell>${item.eps.toFixed(2)}</TableCell>
                       <TableCell>{formatCurrency(item.operatingIncome)}</TableCell>
